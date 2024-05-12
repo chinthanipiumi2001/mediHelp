@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Locations Map</title>
+    <!-- Include Leaflet.js library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Extract latitude and longitude coordinates from doctors' data
+        var doctors_data = {{ doctors_data|safe }};
+        var sumLat = 0;
+        var sumLng = 0;
+        for (var i = 0; i < doctors_data.length; i++) {
+            sumLat += parseFloat(doctors_data[i].latitude);
+            sumLng += parseFloat(doctors_data[i].longitude);
+        }
+        var avgLat = sumLat / doctors_data.length;
+        var avgLng = sumLng / doctors_data.length;
+
+        var map = L.map('map').setView([avgLat, avgLng], 8);  // Initial map view coordinates
+    
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        // Add doctor markers to the map
+        for (var i = 0; i < doctors_data.length; i++) {
+            var doctor = doctors_data[i];
+            L.marker([doctor.latitude, doctor.longitude]).addTo(map)
+                .bindPopup('<b>' + doctor.name + '</b><br>' + doctor.specialization +'</b><br>'+ doctor.hospital);
+        }
+    </script>
+</body>
+</html>

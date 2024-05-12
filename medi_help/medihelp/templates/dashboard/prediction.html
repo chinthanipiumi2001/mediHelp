@@ -1,0 +1,78 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {%load static%}
+<link rel="stylesheet" href="{% static 'css/cards.css' %}"><!-- Load CSS file -->
+</head>
+<body>
+    {% include 'dashboard/components/navbar.html' %}
+    {% include 'dashboard/components/card.html' %}
+    <div class = "chart">
+        <canvas id="bar-chart"></canvas>
+    </div>
+    {% if index == 0 %}
+        {% include 'dashboard/components/0.html' %}
+    {%elif index == 1%}
+        {% include 'dashboard/components/1.html' %}
+    {%elif index == 2%}
+        {% include 'dashboard/components/2.html' %}
+    {%elif index == 3%}
+        {% include 'dashboard/components/3.html' %}
+    {%elif index == 4%}
+        {% include 'dashboard/components/4.html' %}
+    {%elif index == 5%}
+        {% include 'dashboard/components/5.html' %}
+    {%elif index == 6%}
+        {% include 'dashboard/components/6.html' %}
+    {%elif index == 7%}
+        {% include 'dashboard/components/7.html' %}
+    {%elif index == 8%}
+        {% include 'dashboard/components/8.html' %}
+    {%elif index == 9%}
+        {% include 'dashboard/components/9.html' %}
+    {%elif index == 10%}
+        {% include 'dashboard/components/10.html' %}
+    {% endif %}
+    
+    <script>
+        var ctx = document.getElementById('bar-chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {{ labels|safe }},
+                datasets: [{
+                    label: {{labels|safe}},
+                    data: {{ data|safe }},
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Percentage of Skin Diseases'
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>

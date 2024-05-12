@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi help</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <!--<div id="nav">
+        <h3><b>CYBER</b>FICTION*</h3>
+        <button>APRIL,2023</button>
+    </div>-->
+    <div id="main">
+        <div id="page">
+            <div id="loop" >
+                <h1 ><b>MEDI-</b>HELP. WHERE <b><i>FACE</i></b> <span>DISEASES</span> MEET ACCURATE <span><i>DETECTION.</i></span></h1>
+                <h1><b>MEDI-</b>HELP. WHERE <b><i>FACE</i></b> <span>DISEASES</span> MEET ACCURATE <span><i>DETECTION.</i></span></h1>
+                <h1><b>MEDI-</b>HELP. WHERE <b><i>FACE</i></b> <span>DISEASES</span> MEET ACCURATE <span><i>DETECTION.</i></span></h1>
+            </div>
+            <h3 class="gradient-text">Medi Help:<br> Precision face disease detection for confident healthcare decisions.</h3>
+            <h4 class="gradient-text-header">...SCROLL TO READ</h4>
+            <canvas></canvas>
+        </div>
+        <div id="page1">
+            <div id="right-text">
+                <h3 class="gradient-text">MEDI-HELP / KEY WORD</h3>
+                <h1 class="gradient-text-header"><span>HEALTHCARE</span>
+                    <br>
+                    LET'S CHECKUP
+                    <br>
+                    GUIDANCE</h1>
+            </div>
+            <div id="left-text">
+                <h1 class="gradient-text-header">MAKE A STORY
+                    <br>
+                    TAKE A CHANCE
+                    <br>
+                    BUILD AND OWNED</h1>
+                    <h3 class="gradient-text">..AND MAINTAIN GOOD HUMANITY</h3>
+            </div>
+        </div>
+        <div id="page2">
+            <div id="text1">
+                <h3 class="gradient-text">CYBERFICTION / HAVE FUN</h3>
+                <h1 class="gradient-text-header">LET'S
+                    <br>
+                    HAVE FUN
+                    <br>
+                    TOGETHER</h1>
+            </div>
+            <div id="text2">
+                <p class="gradient-text-header">LET'S HAVE A BLAST! LET'S JUST THROW AWAY AGE, GENDER, REGION, <br> STATUS, ETC., DON'T COMPETE, DON'T FIGHT, COOPERATE AND SHARE <br> WITH EACH OTHER AND ENJOY IT TOGETHER! SO THAT YOU CAN STAND <br> THERE IN THE NOT-TOO-DISTANT FUTURE AND DREAM OF ANOTHER NEW <br> FUTURE</p>
+            </div>
+        </div>
+        <div id="page3">
+            <div id="text3" class="gradient-text">
+                <h3 >CYBERFICTION / PLAYGROUND</h3>
+                <h1 class="gradient-text-header">
+
+                    CYBERFIELD
+                    <br>
+                    IS OUR
+                    <br>
+                    PLAYGROUND
+                </h1>
+               
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id = "footer"><!--Footer section-->
+        <a href="{% url 'login' %}"><!--Add route to login-->
+            <button class="button" role="button"><!--Dashbording redirect button-->
+                <span class="text">Login Now</span><!--Button text-->
+            </button>
+        </a>
+    </footer><!--End of the footer section-->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script> <!--Insert Custom coded JavaScript--> 
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+body {
+  background-image: url('../img/contact.jpg');
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+.box{
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 600px;
+  height: 600px;
+  border: 1px solid #481af0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff4d;
+
+}
+h1{
+  position: absolute;
+  left: 30%;
+  color:rgb(57, 107, 236);
+}
+h2{
+  position: relative;
+  left: 10%;
+  color:rgb(170, 237, 197);
+}
+p{
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 2px #f9f9f9, 0 0 5px #f9f9fa;
+}
+.check{
+  color:rgb(57, 107, 236);
+}
+.check1{
+  color:rgb(251, 14, 14);
+}
+.check3{
+  color:rgb(226, 16, 245);
+  text-shadow: 0 0 2px #f9f9f9, 0 0 5px #f9f9fa;
+}

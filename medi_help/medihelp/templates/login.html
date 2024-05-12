@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"><!--load style css file-->
+    <title>SmartGrader SignIn</title>
+</head>
+<body>
+    <div class="container"><!--Set Container-->
+        <div class="card"><!--Add card to center of Container-->
+            <div class="form"><!--Login form style-->
+                <h1 class="heading-login">Login</h1><!--Login header-->
+                <form id="login-form" method="post" action= "{% url 'validate_login'%}"><!--Login form start here-->
+                    {% csrf_token %}
+                    <p class="heading-login">Still you have not account <a href="{% url 'signup' %}"><b><font color="red">Click this</font></b></a></p><br><!--Not registered users-->
+                    <input type="text" placeholder="E-mail Address" required class="input" name="mail"><!--mail address-->
+                    <input type="password" placeholder="Password" required class="input" name="password"><!--password field-->
+                    <button type="submit" id="login-button" class="submit-button">login</button><!--login button-->
+                </form><!--End of the form-->
+            </div>
+        </div>
+    </div><!-- we are not using js validations because if you enter null value automatically php shows error message because we created all tables values as a not null.-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script><!--Gasp js library load-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

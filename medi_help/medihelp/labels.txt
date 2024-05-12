@@ -1,0 +1,11 @@
+0 atopic-dermatitis
+1 basal cell carcinoma
+2 bengin keratosis
+3 Eczema
+4 melanocytic
+5 melanoma
+6 possitive images
+7 psoriasis pictures
+8 seborheic keratoses
+9 tinea gingworm candidiasis
+10 warts molluscum and other

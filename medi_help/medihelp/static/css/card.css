@@ -1,0 +1,66 @@
+
+.map{
+    position: fixed;
+    bottom:1px;
+    left:10px;
+    width: 600px;
+    height: 200px;
+    border: 1px solid rgb(1, 1, 252);
+    background: linear-gradient(90deg, rgb(15, 27, 80) 0%, rgb(18, 202, 187) 100%);
+    border-radius: 8px;
+}
+h3, h1 {
+    margin: 0 30px;
+  }
+  
+  h31 {
+    margin-top: 30px;
+    color: white;
+    font-size: 28px;
+    font-weight: 300;
+  }
+  h1 {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 55px;
+  }
+
+
+/* CSS */
+.button-24 {
+    position: absolute;
+    right: 20px;
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}

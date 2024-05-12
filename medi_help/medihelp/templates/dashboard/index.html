@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmartGrader Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard/index.css' %}"><!-- Load CSS file -->
+    <style>
+        body {
+            background-image: url("{% static 'img/card.jpg' %}");
+            background-size: cover; /* Adjust image size to cover entire background */
+            background-position: center; /* Center the image */
+            /* Optionally, you can add other background properties */
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+        }
+    </style>
+</head>
+<body>
+    {% include 'dashboard/components/navbar.html' %}
+    {% include 'dashboard/components/upload.html' %}
+    {% include 'dashboard/components/bottomCard.html' %}
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/card.css' %}"><!-- Load CSS file -->
+<div class="map">
+    <h31>Map Your</h31>
+
+    <h1> Skincare Specialists</h1>
+    <form method="post" enctype="multipart/form-data" action = '/map/?session_key={{session_key}}'>
+        {% csrf_token %}
+        <button class="button-24" role="button">Find Now</button></a>
+    </form>
+</div>
